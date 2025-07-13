@@ -1,7 +1,27 @@
 import random
 from adapters.weather import openweather, weatherapi
 from config import WEATHERAPI_KEY, OPENWEATHER_KEY
+from adapters.ip import ipapi, ipinfo
+# other imports remain
 
+IP_PROVIDERS = [
+    {
+        "name": "ipapi",
+        "module": ipapi,
+        "key": "your_ipapi_key"  # optional (free tier works without)
+    },
+    {
+        "name": "ipinfo",
+        "module": ipinfo,
+        "key": "your_ipinfo_key"
+    }
+]
+
+def select_ip_provider():
+    from random import choice
+    return choice(IP_PROVIDERS)
+    
+    
 PROVIDERS = [
     {
         "name": "weatherapi",
