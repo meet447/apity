@@ -4,3 +4,4 @@ requests
 python-dotenv
 curl_cffi
 ddgs
+googlesearch-python

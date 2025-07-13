@@ -3,12 +3,18 @@ from adapters.weather import openweather, weatherapi
 from config import WEATHERAPI_KEY, OPENWEATHER_KEY
 from adapters.ip import ipapi, ipinfo
 from adapters.search import duckduckgo
+from adapters.search import google
 
 SEARCH_PROVIDERS = [
     {
         "name": "duckduckgo",
         "module": duckduckgo,
         "key": "your_serpapi_key"
+    },
+    {
+        "name": "google",
+        "module": google,
+        "key": "your_google_key"
     }
 ]
 

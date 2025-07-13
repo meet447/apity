@@ -7,13 +7,12 @@ def make_request(query: str, key: str = "") -> list:
 def normalize(data: dict) -> dict:
     results = []
     for result in data:
-        print(result)
         results.append({
             "title": result["title"],
             "url": result["href"],
             "snippet": result["body"]
         })
     return {
-        "query": "",
+        "query": "duckduckgo",
         "results": results
     }
