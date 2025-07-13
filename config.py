@@ -5,3 +5,4 @@ load_dotenv()
 
 WEATHERAPI_KEY = os.getenv("WEATHERAPI_KEY")
 OPENWEATHER_KEY = os.getenv("OPENWEATHER_KEY")
+OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")

@@ -3,6 +3,7 @@ from models.weather import WeatherResponse
 from services.selector import select_weather_provider
 from plugins.weather import post_response
 
+
 router = APIRouter()
 
 @router.get("/weather", response_model=WeatherResponse)
