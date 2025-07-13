@@ -2,8 +2,20 @@ import random
 from adapters.weather import openweather, weatherapi
 from config import WEATHERAPI_KEY, OPENWEATHER_KEY
 from adapters.ip import ipapi, ipinfo
-# other imports remain
+from adapters.search import duckduckgo
 
+SEARCH_PROVIDERS = [
+    {
+        "name": "duckduckgo",
+        "module": duckduckgo,
+        "key": "your_serpapi_key"
+    }
+]
+
+def select_search_provider():
+    from random import choice
+    return choice(SEARCH_PROVIDERS)
+    
 IP_PROVIDERS = [
     {
         "name": "ipapi",
