@@ -17,10 +17,6 @@ SEARCH_PROVIDERS = [
         "key": "your_google_key"
     }
 ]
-
-def select_search_provider():
-    from random import choice
-    return choice(SEARCH_PROVIDERS)
     
 IP_PROVIDERS = [
     {
@@ -33,14 +29,9 @@ IP_PROVIDERS = [
         "module": ipinfo,
         "key": "your_ipinfo_key"
     }
-]
-
-def select_ip_provider():
-    from random import choice
-    return choice(IP_PROVIDERS)
+]    
     
-    
-PROVIDERS = [
+WEATHER_PROVIDERS = [
     {
         "name": "weatherapi",
         "module": weatherapi,
@@ -52,6 +43,3 @@ PROVIDERS = [
         "key": OPENWEATHER_KEY
     }
 ]
-
-def select_weather_provider():
-    return random.choice(PROVIDERS)  # or round-robin, failover, etc.
